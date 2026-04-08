@@ -1,0 +1,2465 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Rules-based options trading system — Plan H, Plan M, Plan C, Plan Alpha">
+      
+      
+        <meta name="author" content="Dana">
+      
+      
+      
+        <link rel="prev" href="../overview/">
+      
+      
+        <link rel="next" href="../plan-h-backtest/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Plan H — Day Trading - Master Rulebook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#plan-h-day-trading-h9-race-v3" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Master Rulebook" class="md-header__button md-logo" aria-label="Master Rulebook" data-md-component="logo">
+      
+  <img src="../../assets/favicon.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Master Rulebook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Plan H — Day Trading
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
+  
+  Trading Plans
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../regime/detection/" class="md-tabs__link">
+          
+  
+  
+  Regime
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../execution/options/" class="md-tabs__link">
+          
+  
+  
+  Execution
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../backtests/results/" class="md-tabs__link">
+          
+  
+  
+  Backtests
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../infrastructure/pipeline/" class="md-tabs__link">
+          
+  
+  
+  Infrastructure
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../harness/" class="md-tabs__link">
+          
+  
+  
+  Agent Harness
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../journal/lessons/" class="md-tabs__link">
+          
+  
+  
+  Journal
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../glossary/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Glossary
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Master Rulebook" class="md-nav__button md-logo" aria-label="Master Rulebook" data-md-component="logo">
+      
+  <img src="../../assets/favicon.svg" alt="logo">
+
+    </a>
+    Master Rulebook
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trading Plans
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Trading Plans
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan H — Day Trading
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan H — Day Trading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#signal-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signal Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Signal Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pullback-primary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pullback (primary)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breakout-supplemental" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Breakout (supplemental)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-race-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The race condition
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entry-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entry Filters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sizing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sizing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exit-rules-priority-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exit Rules (priority order)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyramiding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pyramiding
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backtest-results-2016-2026-choppy-70k-flat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backtest Results (2016-2026, choppy, $70K flat)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Backtest Results (2016-2026, choppy, $70K flat)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#race-v3-current-live-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Race v3 (current live config)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#year-by-year" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Year-by-year
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signal-type-breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signal type breakdown
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monte-carlo-simulation-10000-runs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monte Carlo simulation (10,000 runs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-discoveries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key discoveries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Indicators
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plan-h-backtest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan H — Backtest
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plan-m/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan M — Swing Trading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plan-m-forward-test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan M Short — Forward Test
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plan-c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan C — Crash Shorts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plan-alpha/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan Alpha — Mean Reversion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plan-etf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan ETF — Defensive
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sicadfu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SICADFU — Do Nothing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Regime
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Regime
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../regime/detection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../regime/transitions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transitions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Execution
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Execution
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../execution/options/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Options Selection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../execution/sizing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Position Sizing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../execution/exits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exits & Stops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backtests
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Backtests
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backtests/results/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Combined Results
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backtests/rejected/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    What Doesn't Work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backtests/discoveries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Key Discoveries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Infrastructure
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Infrastructure
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../infrastructure/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Daily Pipeline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../infrastructure/screeners/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Screeners
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../infrastructure/monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Harness
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agent Harness
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../harness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../harness/architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../harness/dev-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dev Pipeline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../harness/how-we-got-here/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How We Got Here
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../harness/lessons-and-failure-modes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lessons and Failure Modes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../harness/memory-and-continuity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Memory and Continuity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../harness/model-coordination/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Coordination
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../harness/scheduling-and-operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scheduling and Operations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../harness/security-and-guardrails/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security and Guardrails
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../harness/tool-integrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tool Integrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Journal
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Journal
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../journal/lessons/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lessons Learned
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../journal/journey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Journey
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="plan-h-day-trading-h9-race-v3">Plan H — Day Trading (H9 Race v3)<a class="headerlink" href="#plan-h-day-trading-h9-race-v3" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Regime</strong></td>
+<td>Choppy only (SPY 20d return -2% to +2%)</td>
+</tr>
+<tr>
+<td><strong>Symbols</strong></td>
+<td>SPY, QQQ</td>
+</tr>
+<tr>
+<td><strong>Instrument</strong></td>
+<td>Options, 0.42 delta, 3-5 DTE</td>
+</tr>
+<tr>
+<td><strong>Timeframe</strong></td>
+<td>5-min</td>
+</tr>
+<tr>
+<td><strong>Risk</strong></td>
+<td>$4,200 = 6% of $70K (throttles to 2% after 3 consecutive losses)</td>
+</tr>
+<tr>
+<td><strong>Hold Period</strong></td>
+<td>Intraday, entries 09:40-11:00 ET, force close 11:28 ET</td>
+</tr>
+<tr>
+<td><strong>Backtest Edge</strong></td>
+<td>1,092 trades, 48.1% WR, PF 1.34, +$184K</td>
+</tr>
+</tbody>
+</table>
+<p>Plan H is the intraday workhorse for sideways, messy markets. It uses two signal types — <strong>pullback</strong> and <strong>breakout</strong> — in a race condition. The system checks for pullback first on every bar, and only considers breakout if pullback didn't fire. Max 1 trade per symbol per day.</p>
+<p>If you are new to the terms on this page:</p>
+<ul>
+<li><strong>EMA21</strong> is a 21-period Exponential Moving Average, used here as the main pullback/stop line.</li>
+<li><strong>VWAP</strong> is the Volume-Weighted Average Price, a common intraday reference for where most trading has happened.</li>
+<li><strong>ATR</strong> is Average True Range, used to normalize movement.</li>
+<li><strong>Delta</strong> and <strong>DTE</strong> describe the option contract. See the <a href="../../glossary/">Glossary</a>.</li>
+</ul>
+<h2 id="signal-types">Signal Types<a class="headerlink" href="#signal-types" title="Permanent link">&para;</a></h2>
+<h3 id="pullback-primary">Pullback (primary)<a class="headerlink" href="#pullback-primary" title="Permanent link">&para;</a></h3>
+<p>Catches price snapping back from a brief touch of EMA21 within a trend. Fires across the full <strong>09:40-11:00 ET</strong> window.</p>
+<p>The idea: the market is already moving in one direction, briefly pulls back toward EMA21, and then starts pushing again. Like catching a breath inside a move, not trying to predict a reversal.</p>
+<p>All must be true on the same 5-min bar:</p>
+<h3 id="breakout-supplemental">Breakout (supplemental)<a class="headerlink" href="#breakout-supplemental" title="Permanent link">&para;</a></h3>
+<p>Catches strong early-morning trends that never pull back to EMA21. Fires only in a restricted <strong>09:40-10:10 ET</strong> window. Requires a clean EMA stack instead of a pullback touch.</p>
+<h3 id="the-race-condition">The race condition<a class="headerlink" href="#the-race-condition" title="Permanent link">&para;</a></h3>
+<p>On every 5-min bar, the system checks pullback first. Only if pullback doesn't fire does it check breakout (and only before 10:10). Once either signal fires and enters a trade, that symbol is done for the day.</p>
+<p>The 10:10 cutoff for breakouts exists because late-morning breakout entries historically mean-reverted — they fired after price had already moved 1+ ATR in low-vol choppy conditions. Cutting the window at 10:10 alone flipped 2024 from -(9.8K to +)3.9K.</p>
+<h2 id="entry-filters">Entry Filters<a class="headerlink" href="#entry-filters" title="Permanent link">&para;</a></h2>
+<p>These filters apply to both signal types:</p>
+<ol>
+<li><strong>Race limit:</strong> Max 1 signal per symbol per day (pullback or breakout, whichever fires first)</li>
+<li><strong>EMA5-10 spread:</strong> |EMA5 - EMA10| / ATR &gt;= 0.25 (trend must be fanning)</li>
+<li><strong>Move from open:</strong> Directional move from day open / ATR &gt;= 1.0</li>
+<li><strong>Min stop distance:</strong> |entry - EMA21| &gt;= $0.10 (avoids micro-stop entries)</li>
+<li><strong>Gap delay:</strong> If |open - prior_close| / prior_close &gt;= 0.5%, delay entries to 10:00 ET</li>
+<li><strong>Macro skip:</strong> No entries on FOMC, CPI, NFP days</li>
+<li><strong>Regime gate:</strong> Only trade choppy regime (SPY 20d return -2% to +2%)</li>
+</ol>
+<p>The <strong>gap delay</strong> exists because the opening minutes can be distorted after a big overnight move.</p>
+<h2 id="sizing">Sizing<a class="headerlink" href="#sizing" title="Permanent link">&para;</a></h2>
+<p>Plan H sizes from the distance to EMA21. If price is farther from the stop line, position size shrinks automatically.</p>
+<div class="highlight"><pre><span></span><code>current_risk  = 0.02 if consecutive_losses &gt;= 3 else 0.06
+risk_dollars  = equity * current_risk
+stop_dist     = max(|entry - EMA21|, 0.10)
+risk_per_ct   = stop_dist * 0.42 * 100
+contracts     = min(floor(risk_dollars / risk_per_ct), 50)
+entry_premium = max(ATR14 * 0.42 * 0.5, 0.50)
+</code></pre></div>
+<p>The throttle from 6% to 2% after 3 consecutive losses persists across days and symbols. It resets on the next win.</p>
+<h2 id="exit-rules-priority-order">Exit Rules (priority order)<a class="headerlink" href="#exit-rules-priority-order" title="Permanent link">&para;</a></h2>
+<p>The exit structure cuts failed trades quickly and protects profits once the option starts moving.</p>
+<ol>
+<li><strong>Force close (11:28 ET):</strong> Exit all positions — no exceptions</li>
+<li><strong>EMA5 trailing stop:</strong> Once trailing is activated, exit if close crosses EMA5 against direction</li>
+<li><strong>EMA21 initial stop:</strong> Before trailing activates, exit if close crosses EMA21 against direction</li>
+<li><strong>Profit trail switch:</strong> Option P&amp;L &gt;= +15% activates EMA5 trail (tighter stop, locks in gains)</li>
+</ol>
+<p>Entry executes on the <strong>next bar's open</strong> after signal fires (not the signal bar itself).</p>
+<div class="admonition warning">
+<p class="admonition-title">AM Only</p>
+<p>PM session was a net -$14K over 10 years across all variants. Never trade PM.</p>
+</div>
+<h2 id="pyramiding">Pyramiding<a class="headerlink" href="#pyramiding" title="Permanent link">&para;</a></h2>
+<p><strong>Pyramiding</strong> means adding to a trade only after it is already working, rather than betting full size immediately.</p>
+<ul>
+<li><strong>Tier 2 (+30% option P&amp;L):</strong> Add floor(base * 0.5) contracts (max 25). Activates EMA5 trail.</li>
+<li><strong>Tier 3 (+100% option P&amp;L):</strong> Requires T2 fired. Add floor(base * 0.25) contracts (max 12).</li>
+</ul>
+<h2 id="backtest-results-2016-2026-choppy-70k-flat">Backtest Results (2016-2026, choppy, $70K flat)<a class="headerlink" href="#backtest-results-2016-2026-choppy-70k-flat" title="Permanent link">&para;</a></h2>
+<p>These numbers are the reason the regime filter matters so much. This plan works best when the market is messy, not when it is in a clean sustained bull run.</p>
+<h3 id="race-v3-current-live-config">Race v3 (current live config)<a class="headerlink" href="#race-v3-current-live-config" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trades</td>
+<td>1,092</td>
+</tr>
+<tr>
+<td>Win Rate</td>
+<td>48.1%</td>
+</tr>
+<tr>
+<td>Profit Factor</td>
+<td>1.34</td>
+</tr>
+<tr>
+<td>Total P&amp;L</td>
+<td>+$184,476</td>
+</tr>
+<tr>
+<td>Avg Trade</td>
+<td>+$169</td>
+</tr>
+<tr>
+<td>Positive Years</td>
+<td>8/11</td>
+</tr>
+<tr>
+<td>Modern (2019-2026)</td>
+<td>+$231,940</td>
+</tr>
+<tr>
+<td>Early (2016-2018)</td>
+<td>-$47,465</td>
+</tr>
+</tbody>
+</table>
+<h3 id="year-by-year">Year-by-year<a class="headerlink" href="#year-by-year" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Pullback</th>
+<th>PB P&amp;L</th>
+<th>Breakout</th>
+<th>BO P&amp;L</th>
+<th>Total</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2016</td>
+<td>78</td>
+<td>-$8,590</td>
+<td>59</td>
+<td>-$7,451</td>
+<td>-$16,041</td>
+<td></td>
+</tr>
+<tr>
+<td>2017</td>
+<td>149</td>
+<td>-$26,333</td>
+<td>47</td>
+<td>-$2,881</td>
+<td>-$29,214</td>
+<td></td>
+</tr>
+<tr>
+<td>2018</td>
+<td>82</td>
+<td>-$11,066</td>
+<td>34</td>
+<td>+$8,857</td>
+<td>-$2,209</td>
+<td></td>
+</tr>
+<tr>
+<td>2019</td>
+<td>42</td>
+<td>-$4,278</td>
+<td>35</td>
+<td>+$13,846</td>
+<td>+$9,568</td>
+<td></td>
+</tr>
+<tr>
+<td>2020</td>
+<td>20</td>
+<td>+$10,253</td>
+<td>27</td>
+<td>+$796</td>
+<td>+$11,048</td>
+<td></td>
+</tr>
+<tr>
+<td>2021</td>
+<td>74</td>
+<td>-$16,590</td>
+<td>45</td>
+<td>+$30,263</td>
+<td>+$13,673</td>
+<td></td>
+</tr>
+<tr>
+<td>2022</td>
+<td>20</td>
+<td>+$19,686</td>
+<td>26</td>
+<td>-$11,611</td>
+<td>+$8,074</td>
+<td></td>
+</tr>
+<tr>
+<td>2023</td>
+<td>54</td>
+<td>-$3,461</td>
+<td>39</td>
+<td>+$39,743</td>
+<td>+$36,283</td>
+<td></td>
+</tr>
+<tr>
+<td>2024</td>
+<td>57</td>
+<td>+$6,263</td>
+<td>33</td>
+<td>-$2,356</td>
+<td>+$3,907</td>
+<td></td>
+</tr>
+<tr>
+<td>2025</td>
+<td>81</td>
+<td>+$26,215</td>
+<td>38</td>
+<td>+$26,094</td>
+<td>+$52,309</td>
+<td></td>
+</tr>
+<tr>
+<td>2026</td>
+<td>34</td>
+<td>+$75,401</td>
+<td>18</td>
+<td>+$21,678</td>
+<td>+$97,079</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="signal-type-breakdown">Signal type breakdown<a class="headerlink" href="#signal-type-breakdown" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Trades</th>
+<th>P&amp;L</th>
+<th>Win Rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pullback</td>
+<td>691 (63%)</td>
+<td>+$67,498</td>
+<td>41.4%</td>
+</tr>
+<tr>
+<td>Breakout</td>
+<td>401 (37%)</td>
+<td>+$116,977</td>
+<td>59.6%</td>
+</tr>
+</tbody>
+</table>
+<p>Pullback has lower WR but asymmetric payoff — wins are nearly 2x losses. Breakout has higher WR and accounts for 63% of total P&amp;L despite being only 37% of trades.</p>
+<p>See the full <a href="../plan-h-backtest/">Backtest</a> for an interactive equity curve and trade-by-trade log.</p>
+<h3 id="monte-carlo-simulation-10000-runs">Monte Carlo simulation (10,000 runs)<a class="headerlink" href="#monte-carlo-simulation-10000-runs" title="Permanent link">&para;</a></h3>
+<p>Bootstrap resampling of all 1,092 trades with replacement to estimate the distribution of outcomes over the same number of trades.</p>
+<table>
+<thead>
+<tr>
+<th>Percentile</th>
+<th>P&amp;L</th>
+<th>Final Equity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P10 (bear case)</td>
+<td>+$105K</td>
+<td>$175K</td>
+</tr>
+<tr>
+<td>P25</td>
+<td>+$142K</td>
+<td>$212K</td>
+</tr>
+<tr>
+<td>P50 (median)</td>
+<td>+$183K</td>
+<td>$253K</td>
+</tr>
+<tr>
+<td>P75</td>
+<td>+$225K</td>
+<td>$295K</td>
+</tr>
+<tr>
+<td>P90 (bull case)</td>
+<td>+$266K</td>
+<td>$336K</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Risk Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Probability profitable</td>
+<td>99.9%</td>
+</tr>
+<tr>
+<td>Probability double account</td>
+<td>97.1%</td>
+</tr>
+<tr>
+<td>Probability of ruin (&lt;50%)</td>
+<td>2.1%</td>
+</tr>
+<tr>
+<td>Mean max drawdown</td>
+<td>-24.9%</td>
+</tr>
+<tr>
+<td>Annualized Sharpe</td>
+<td>0.93</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-discoveries">Key discoveries<a class="headerlink" href="#key-discoveries" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Early years (2016-2018) are net negative. The strategy's edge is modern — post-2019 market microstructure with tighter spreads and faster reversion. This is not a concern for live trading.</li>
+<li>Breakout accounts for 63% of total P&amp;L despite being only 37% of trades — the restricted 10:10 window filters out weak entries effectively.</li>
+<li>The 2.1% ruin probability comes from extreme drawdown sequences in the bootstrap — the actual backtest never approached 50% drawdown.</li>
+</ul>
+<h2 id="indicators">Indicators<a class="headerlink" href="#indicators" title="Permanent link">&para;</a></h2>
+<p>All computed on 5-min bars resampled from 1-min:</p>
+<ul>
+<li><strong>EMA5, EMA10, EMA21</strong> — span-based, adjust=False</li>
+<li><strong>ATR14</strong> — 14-period SMA of true range</li>
+<li><strong>VWAP</strong> — full-day, anchored 09:30 ET</li>
+<li><strong>VWAP slope</strong> — 2-bar diff on 5-min VWAP (10-min momentum)</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "toc.integrate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

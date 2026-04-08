@@ -1,0 +1,93 @@
+site_name: Master Rulebook
+site_description: Rules-based options trading system — Plan H, Plan M, Plan C, Plan Alpha
+site_author: Dana
+
+theme:
+  name: material
+  logo: assets/favicon.svg
+  favicon: assets/favicon.svg
+  font:
+    text: Roboto
+    code: Roboto Mono
+  palette:
+    - scheme: slate
+      primary: deep orange
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - scheme: default
+      primary: deep orange
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  icon:
+    logo: material/chart-line
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - toc.integrate
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Trading Plans:
+    - Overview: plans/overview.md
+    - Plan H — Day Trading: plans/plan-h.md
+    - Plan H — Backtest: plans/plan-h-backtest.md
+    - Plan M — Swing Trading: plans/plan-m.md
+    - Plan M Short — Forward Test: plans/plan-m-forward-test.md
+    - Plan C — Crash Shorts: plans/plan-c.md
+    - Plan Alpha — Mean Reversion: plans/plan-alpha.md
+    - Plan ETF — Defensive: plans/plan-etf.md
+    - SICADFU — Do Nothing: plans/sicadfu.md
+  - Regime:
+    - Classification: regime/detection.md
+    - Transitions: regime/transitions.md
+  - Execution:
+    - Options Selection: execution/options.md
+    - Position Sizing: execution/sizing.md
+    - Exits & Stops: execution/exits.md
+  - Backtests:
+    - Combined Results: backtests/results.md
+    - What Doesn't Work: backtests/rejected.md
+    - Key Discoveries: backtests/discoveries.md
+  - Infrastructure:
+    - Daily Pipeline: infrastructure/pipeline.md
+    - Screeners: infrastructure/screeners.md
+    - Monitoring: infrastructure/monitoring.md
+  - Agent Harness:
+    - Overview: harness/index.md
+    - System Architecture: harness/architecture.md
+    - Dev Pipeline: harness/dev-pipeline.md
+    - How We Got Here: harness/how-we-got-here.md
+    - Lessons and Failure Modes: harness/lessons-and-failure-modes.md
+    - Memory and Continuity: harness/memory-and-continuity.md
+    - Model Coordination: harness/model-coordination.md
+    - Scheduling and Operations: harness/scheduling-and-operations.md
+    - Security and Guardrails: harness/security-and-guardrails.md
+    - Tool Integrations: harness/tool-integrations.md
+  - Journal:
+    - Lessons Learned: journal/lessons.md
+    - The Journey: journal/journey.md
+  - Glossary: glossary/index.md
