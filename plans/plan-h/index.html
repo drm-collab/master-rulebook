@@ -613,10 +613,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#pullback-primary" class="md-nav__link">
+  <a href="#pullback-primary-pullback_ema21" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Pullback (primary)
+        Pullback (primary) — pullback_ema21
       
     </span>
   </a>
@@ -624,10 +624,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#breakout-supplemental" class="md-nav__link">
+  <a href="#breakout-supplemental-breakout_ema_stack" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Breakout (supplemental)
+        Breakout (supplemental) — breakout_ema_stack
       
     </span>
   </a>
@@ -645,16 +645,49 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#dual-slot-sizing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dual-slot sizing
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#entry-filters" class="md-nav__link">
+  <a href="#entry-filters-both-signal-types" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Entry Filters
+        Entry Filters (both signal types)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#markov-overlay-live-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Markov overlay (live filter)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option selection
       
     </span>
   </a>
@@ -684,10 +717,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pyramiding" class="md-nav__link">
+  <a href="#what-live-does-not-do" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Pyramiding
+        What live does not do
       
     </span>
   </a>
@@ -695,22 +728,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#backtest-results-2016-2026-choppy-70k-flat" class="md-nav__link">
+  <a href="#indicators" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Backtest Results (2016-2026, choppy, $70K flat)
+        Indicators
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Backtest Results (2016-2026, choppy, $70K flat)">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ops
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backtest-results-20162026-choppy-70k-flat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backtest Results (2016–2026, choppy, $70K flat)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Backtest Results (2016–2026, choppy, $70K flat)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#race-v3-current-live-config" class="md-nav__link">
+  <a href="#race-v3-baseline" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Race v3 (current live config)
+        Race v3 (baseline)
       
     </span>
   </a>
@@ -740,10 +795,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#monte-carlo-simulation-10000-runs" class="md-nav__link">
+  <a href="#monte-carlo-10000-runs-baseline-race-v3-book" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Monte Carlo simulation (10,000 runs)
+        Monte Carlo (10,000 runs, baseline race-v3 book)
       
     </span>
   </a>
@@ -763,17 +818,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#indicators" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Indicators
-      
-    </span>
-  </a>
   
 </li>
       
@@ -2042,7 +2086,7 @@
 <tbody>
 <tr>
 <td><strong>Regime</strong></td>
-<td>Choppy only (SPY 20d return -2% to +2%)</td>
+<td>Choppy only (SPY 20d return −2% to +2%)</td>
 </tr>
 <tr>
 <td><strong>Symbols</strong></td>
@@ -2050,88 +2094,188 @@
 </tr>
 <tr>
 <td><strong>Instrument</strong></td>
-<td>Options, 0.42 delta, 3-5 DTE</td>
+<td>Options, target <strong>0.42 Δ</strong>, <strong>3–5 DTE</strong></td>
 </tr>
 <tr>
 <td><strong>Timeframe</strong></td>
-<td>5-min</td>
+<td><strong>5-min</strong> bars (1-min → resample; Plan C uses 2-min)</td>
 </tr>
 <tr>
 <td><strong>Risk</strong></td>
-<td>$4,200 = 6% of $70K (throttles to 2% after 3 consecutive losses)</td>
+<td><strong>6% equity</strong> per trade → <strong>2%</strong> after <strong>3</strong> consecutive losses (global across symbols)</td>
 </tr>
 <tr>
 <td><strong>Hold Period</strong></td>
-<td>Intraday, entries 09:40-11:00 ET, force close 11:28 ET</td>
+<td>Intraday; entries <strong>09:40–11:00 ET</strong>; force close <strong>11:28 ET</strong></td>
+</tr>
+<tr>
+<td><strong>Live code</strong></td>
+<td><code>workspace/trading_plans/production/plan_h/symbol_monitor.py</code></td>
 </tr>
 <tr>
 <td><strong>Backtest Edge</strong></td>
-<td>1,092 trades, 48.1% WR, PF 1.34, +$184K</td>
+<td>Race v3 2016–2026 (choppy): 1,092 trades, 48.1% WR, PF 1.34, +$184K on $70K flat</td>
 </tr>
 </tbody>
 </table>
-<p>Plan H is the intraday workhorse for sideways, messy markets. It uses two signal types — <strong>pullback</strong> and <strong>breakout</strong> — in a race condition. The system checks for pullback first on every bar, and only considers breakout if pullback didn't fire. Max 1 trade per symbol per day.</p>
+<p>Plan H is the intraday workhorse for sideways, messy markets. It uses two signal types — <strong>pullback</strong> and <strong>breakout</strong> — in a race condition. Pullback is checked first on every bar; breakout only if pullback did not fire and time ≤ <strong>10:10</strong>. Default max <strong>1 trade per symbol per day</strong>, with an optional <strong>dual-slot</strong> size bump (below).</p>
 <p>If you are new to the terms on this page:</p>
 <ul>
-<li><strong>EMA21</strong> is a 21-period Exponential Moving Average, used here as the main pullback/stop line.</li>
-<li><strong>VWAP</strong> is the Volume-Weighted Average Price, a common intraday reference for where most trading has happened.</li>
-<li><strong>ATR</strong> is Average True Range, used to normalize movement.</li>
+<li><strong>EMA21</strong> is a 21-period Exponential Moving Average — main pullback touch and initial stop.</li>
+<li><strong>VWAP</strong> is Volume-Weighted Average Price (session-anchored 09:30 ET).</li>
+<li><strong>ATR</strong> is Average True Range — normalizes move-from-open and EMA fan filters.</li>
 <li><strong>Delta</strong> and <strong>DTE</strong> describe the option contract. See the <a href="../../glossary/">Glossary</a>.</li>
 </ul>
 <h2 id="signal-types">Signal Types<a class="headerlink" href="#signal-types" title="Permanent link">&para;</a></h2>
-<h3 id="pullback-primary">Pullback (primary)<a class="headerlink" href="#pullback-primary" title="Permanent link">&para;</a></h3>
-<p>Catches price snapping back from a brief touch of EMA21 within a trend. Fires across the full <strong>09:40-11:00 ET</strong> window.</p>
-<p>The idea: the market is already moving in one direction, briefly pulls back toward EMA21, and then starts pushing again. Like catching a breath inside a move, not trying to predict a reversal.</p>
-<p>All must be true on the same 5-min bar:</p>
-<h3 id="breakout-supplemental">Breakout (supplemental)<a class="headerlink" href="#breakout-supplemental" title="Permanent link">&para;</a></h3>
-<p>Catches strong early-morning trends that never pull back to EMA21. Fires only in a restricted <strong>09:40-10:10 ET</strong> window. Requires a clean EMA stack instead of a pullback touch.</p>
-<h3 id="the-race-condition">The race condition<a class="headerlink" href="#the-race-condition" title="Permanent link">&para;</a></h3>
-<p>On every 5-min bar, the system checks pullback first. Only if pullback doesn't fire does it check breakout (and only before 10:10). Once either signal fires and enters a trade, that symbol is done for the day.</p>
-<p>The 10:10 cutoff for breakouts exists because late-morning breakout entries historically mean-reverted — they fired after price had already moved 1+ ATR in low-vol choppy conditions. Cutting the window at 10:10 alone flipped 2024 from -(9.8K to +)3.9K.</p>
-<h2 id="entry-filters">Entry Filters<a class="headerlink" href="#entry-filters" title="Permanent link">&para;</a></h2>
-<p>These filters apply to both signal types:</p>
+<h3 id="pullback-primary-pullback_ema21">Pullback (primary) — <code>pullback_ema21</code><a class="headerlink" href="#pullback-primary-pullback_ema21" title="Permanent link">&para;</a></h3>
+<p>Catches price snapping back from a brief touch of EMA21 inside a trend. Window: full <strong>09:40–11:00 ET</strong> (or <strong>10:00–11:00</strong> on gap days).</p>
+<p><strong>CALL</strong> — all true on the same 5-min bar:</p>
 <ol>
-<li><strong>Race limit:</strong> Max 1 signal per symbol per day (pullback or breakout, whichever fires first)</li>
-<li><strong>EMA5-10 spread:</strong> |EMA5 - EMA10| / ATR &gt;= 0.25 (trend must be fanning)</li>
-<li><strong>Move from open:</strong> Directional move from day open / ATR &gt;= 1.0</li>
-<li><strong>Min stop distance:</strong> |entry - EMA21| &gt;= $0.10 (avoids micro-stop entries)</li>
-<li><strong>Gap delay:</strong> If |open - prior_close| / prior_close &gt;= 0.5%, delay entries to 10:00 ET</li>
-<li><strong>Macro skip:</strong> No entries on FOMC, CPI, NFP days</li>
-<li><strong>Regime gate:</strong> Only trade choppy regime (SPY 20d return -2% to +2%)</li>
+<li>VWAP slope (2-bar) <strong>&gt; 0</strong></li>
+<li>Close <strong>&gt; VWAP</strong></li>
+<li>Stack: <strong>EMA5 &gt; EMA10 &gt; EMA21</strong></li>
+<li>Close <strong>&gt; EMA21</strong></li>
+<li>Prior bar close <strong>≥ prior EMA21</strong></li>
+<li>Bar low <strong>≤ EMA21 × 1.002</strong> (touch)</li>
+<li>Move from open: <code>(close − day_open) / ATR ≥ 1.0</code></li>
+<li>EMA fan: <code>|EMA5 − EMA10| / ATR ≥ 0.25</code></li>
 </ol>
-<p>The <strong>gap delay</strong> exists because the opening minutes can be distorted after a big overnight move.</p>
+<p><strong>PUT</strong> — mirror:</p>
+<ol>
+<li>VWAP slope <strong>&lt; 0</strong></li>
+<li>Close <strong>&lt; VWAP</strong></li>
+<li>Stack: <strong>EMA5 &lt; EMA10 &lt; EMA21</strong></li>
+<li>Close <strong>&lt; EMA21</strong></li>
+<li>Prior bar close <strong>≤ prior EMA21</strong></li>
+<li>Bar high <strong>≥ EMA21 × 0.998</strong></li>
+<li><code>(day_open − close) / ATR ≥ 1.0</code></li>
+<li>Same EMA fan filter</li>
+</ol>
+<h3 id="breakout-supplemental-breakout_ema_stack">Breakout (supplemental) — <code>breakout_ema_stack</code><a class="headerlink" href="#breakout-supplemental-breakout_ema_stack" title="Permanent link">&para;</a></h3>
+<p>Strong early trend that never needs an EMA21 touch. Window: <strong>09:40–10:10 ET</strong> only (no lookback bar). Same stack / VWAP / MFO / fan filters as pullback, <strong>without</strong> the EMA21 touch conditions.</p>
+<p>The 10:10 cutoff exists because later breakouts historically mean-reverted in chop. Cutting the window at 10:10 alone flipped 2024 from −$9.8K to +$3.9K in the race-v3 study.</p>
+<h3 id="the-race-condition">The race condition<a class="headerlink" href="#the-race-condition" title="Permanent link">&para;</a></h3>
+<p>On every completed 5-min bar:</p>
+<ol>
+<li>Check <strong>pullback</strong> first (full entry window).</li>
+<li>Else if <code>t ≤ 10:10</code>, check <strong>breakout</strong>.</li>
+<li>First fire wins for that symbol (subject to dual-slot sizing).</li>
+</ol>
+<h3 id="dual-slot-sizing">Dual-slot sizing<a class="headerlink" href="#dual-slot-sizing" title="Permanent link">&para;</a></h3>
+<p>If a <strong>pullback</strong> fires <strong>and</strong> <code>t ≤ 10:10</code> <strong>and</strong> MFO ≥ <strong>1.5 ATR</strong>, the signal is tagged <code>dual_slot=True</code> and the main loop <strong>doubles contracts</strong> (capped at <code>2 × MAX_CONTRACTS</code>). Intent: both PB and BO regimes are “on” the same bar with enough extension.</p>
+<h2 id="entry-filters-both-signal-types">Entry Filters (both signal types)<a class="headerlink" href="#entry-filters-both-signal-types" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Regime:</strong> SPY 20d return in <strong>[−2%, +2%]</strong> (choppy). Off in bull / crash / unknown (start script writes <code>regime_blocked_today.txt</code>).</li>
+<li><strong>Session:</strong> 09:40–11:00 ET; gap days start at <strong>10:00</strong> if <code>|open − prior_close| / prior_close ≥ 0.5%</code>.</li>
+<li><strong>EMA5–10 spread:</strong> <code>|EMA5 − EMA10| / ATR ≥ 0.25</code>.</li>
+<li><strong>Move from open (MFO):</strong> directional open→close / ATR ≥ <strong>1.0</strong>.</li>
+<li><strong>Macro skip:</strong> no entries on scheduled <strong>FOMC / CPI / NFP</strong> days (hardcoded calendar in monitor).</li>
+<li><strong>Markov overlay (live, on):</strong> reject if lookback is too choppy, state just left chop, or breakout state duration is too short (see below).</li>
+<li><strong>Already in position:</strong> skip new signals for that symbol.</li>
+</ol>
+<h2 id="markov-overlay-live-filter">Markov overlay (live filter)<a class="headerlink" href="#markov-overlay-live-filter" title="Permanent link">&para;</a></h2>
+<p>Walk-forward overlay (enabled). Uses a 5-state classification on 5-min bars (trend up/dn, pullback bull/bear, choppy) and a transition matrix trained on ~60 sessions.</p>
+<p>Reject a signal when:</p>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chop fraction</td>
+<td>&gt; <strong>50%</strong> of last <strong>8</strong> bars classified choppy</td>
+</tr>
+<tr>
+<td>Fresh from chop</td>
+<td>State duration ≤ 1 <strong>and</strong> prior state was choppy</td>
+</tr>
+<tr>
+<td>Breakout duration</td>
+<td>Breakout signal <strong>and</strong> directional-state duration <strong>&lt; 4</strong> bars</td>
+</tr>
+</tbody>
+</table>
+<p>Does not change the base H9 rules; it <strong>filters</strong> low-quality setups before order placement.</p>
+<h2 id="option-selection">Option selection<a class="headerlink" href="#option-selection" title="Permanent link">&para;</a></h2>
+<p>Target <strong>|Δ| ≈ 0.42</strong>, <strong>3–5 DTE</strong>. Hard block if no valid expiry (no arbitrary DTE fallback).</p>
+<p>Live selection (post–Jul 2026 fix):</p>
+<ol>
+<li><strong>Black–Scholes delta</strong> from <strong>live spot</strong> + each strike’s IV (<code>mid_iv</code> / <code>smv_vol</code>).</li>
+<li><strong>Reject junk IV:</strong> IV ≤ 0 or <strong>IV &gt; 3.0 (300%)</strong> — prevents deep-ITM wings from scoring as ~0.42Δ.</li>
+<li><strong>ORATS fallback</strong> only if BS cannot run: use chain delta <strong>only if OTM</strong> (put strike &lt; spot / call strike &gt; spot).</li>
+<li>Return <strong>live |Δ|</strong> into sizing (not stale overnight ORATS).</li>
+</ol>
+<p>Also: max <strong>10% equity</strong> in premium; hard cap <strong>50</strong> contracts per trade (dual-slot can go to <strong>100</strong>).</p>
 <h2 id="sizing">Sizing<a class="headerlink" href="#sizing" title="Permanent link">&para;</a></h2>
-<p>Plan H sizes from the distance to EMA21. If price is farther from the stop line, position size shrinks automatically.</p>
 <div class="highlight"><pre><span></span><code>current_risk  = 0.02 if consecutive_losses &gt;= 3 else 0.06
 risk_dollars  = equity * current_risk
 stop_dist     = max(|entry - EMA21|, 0.10)
-risk_per_ct   = stop_dist * 0.42 * 100
+risk_per_ct   = stop_dist * live_delta * 100
 contracts     = min(floor(risk_dollars / risk_per_ct), 50)
-entry_premium = max(ATR14 * 0.42 * 0.5, 0.50)
+# dual_slot → contracts = min(contracts * 2, 100)
+# also cap by premium: floor(0.10 * equity / (ask * 100))
 </code></pre></div>
-<p>The throttle from 6% to 2% after 3 consecutive losses persists across days and symbols. It resets on the next win.</p>
+<p>Global loss throttle persists across <strong>days and symbols</strong> (shared state file). Resets on the next win.</p>
 <h2 id="exit-rules-priority-order">Exit Rules (priority order)<a class="headerlink" href="#exit-rules-priority-order" title="Permanent link">&para;</a></h2>
-<p>The exit structure cuts failed trades quickly and protects profits once the option starts moving.</p>
 <ol>
-<li><strong>Force close (11:28 ET):</strong> Exit all positions — no exceptions</li>
-<li><strong>EMA5 trailing stop:</strong> Once trailing is activated, exit if close crosses EMA5 against direction</li>
-<li><strong>EMA21 initial stop:</strong> Before trailing activates, exit if close crosses EMA21 against direction</li>
-<li><strong>Profit trail switch:</strong> Option P&amp;L &gt;= +15% activates EMA5 trail (tighter stop, locks in gains)</li>
+<li><strong>Force close (11:28 ET):</strong> flatten — no exceptions.</li>
+<li><strong>EMA5 trailing stop:</strong> after trail is armed, exit if close crosses EMA5 against the trade.</li>
+<li><strong>EMA21 initial stop:</strong> before trail arms, exit if close crosses EMA21 against the trade.</li>
+<li><strong>Trail arm (live):</strong> EMA5 trail arms when <strong>underlying moves +1.0 point</strong> in favor of the trade (size-independent; matches backtest).<br />
+<em>Deprecated live rule (removed): option P&amp;L ≥ +15% or +$1,000 estimated P&amp;L.</em></li>
 </ol>
-<p>Entry executes on the <strong>next bar's open</strong> after signal fires (not the signal bar itself).</p>
+<p>Live fills: <strong>Alpaca paper</strong> immediately; <strong>Tradier sandbox</strong> delayed ~15 min (quote freshness).</p>
 <div class="admonition warning">
 <p class="admonition-title">AM Only</p>
-<p>PM session was a net -$14K over 10 years across all variants. Never trade PM.</p>
+<p>PM session was a net −$14K over 10 years across variants. Plan H does <strong>not</strong> trade PM.</p>
 </div>
-<h2 id="pyramiding">Pyramiding<a class="headerlink" href="#pyramiding" title="Permanent link">&para;</a></h2>
-<p><strong>Pyramiding</strong> means adding to a trade only after it is already working, rather than betting full size immediately.</p>
+<h2 id="what-live-does-not-do">What live does <strong>not</strong> do<a class="headerlink" href="#what-live-does-not-do" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Tier 2 (+30% option P&amp;L):</strong> Add floor(base * 0.5) contracts (max 25). Activates EMA5 trail.</li>
-<li><strong>Tier 3 (+100% option P&amp;L):</strong> Requires T2 fired. Add floor(base * 0.25) contracts (max 12).</li>
+<li><strong>No pyramiding</strong> (no Tier 2 / Tier 3 adds). Size is set at entry (with optional dual-slot 2×).</li>
+<li><strong>No PM session.</strong></li>
+<li><strong>No trading outside choppy</strong> for Plan H (Plan C is a separate crash path in the same process).</li>
 </ul>
-<h2 id="backtest-results-2016-2026-choppy-70k-flat">Backtest Results (2016-2026, choppy, $70K flat)<a class="headerlink" href="#backtest-results-2016-2026-choppy-70k-flat" title="Permanent link">&para;</a></h2>
-<p>These numbers are the reason the regime filter matters so much. This plan works best when the market is messy, not when it is in a clean sustained bull run.</p>
-<h3 id="race-v3-current-live-config">Race v3 (current live config)<a class="headerlink" href="#race-v3-current-live-config" title="Permanent link">&para;</a></h3>
+<h2 id="indicators">Indicators<a class="headerlink" href="#indicators" title="Permanent link">&para;</a></h2>
+<p>All Plan H signals on <strong>5-min</strong> bars (warmup: prior session + today):</p>
+<ul>
+<li><strong>EMA5, EMA10, EMA21</strong> — span-based, <code>adjust=False</code> (EMA21 column is <code>ema20</code> in code for historical reasons)</li>
+<li><strong>ATR14</strong> — 14-period mean true range</li>
+<li><strong>VWAP</strong> — full day, anchored 09:30 ET</li>
+<li><strong>VWAP slope</strong> — 2-bar diff on 5-min VWAP (~10-min momentum)</li>
+</ul>
+<h2 id="ops">Ops<a class="headerlink" href="#ops" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Piece</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>start_monitor_multi.sh SPY QQQ</code></td>
+<td>Cron Mon–Fri ~06:25 ET; respects holiday + regime gate</td>
+</tr>
+<tr>
+<td><code>monitor_watchdog.sh</code></td>
+<td>Restarts hung/dead monitors during AM window</td>
+</tr>
+<tr>
+<td><code>position_monitor.py</code></td>
+<td>Companion exit authority path (stop/trail coordination)</td>
+</tr>
+<tr>
+<td><code>regime_state.json</code></td>
+<td>Choppy / bull / crash from Tradier-driven update</td>
+</tr>
+</tbody>
+</table>
+<h2 id="backtest-results-20162026-choppy-70k-flat">Backtest Results (2016–2026, choppy, $70K flat)<a class="headerlink" href="#backtest-results-20162026-choppy-70k-flat" title="Permanent link">&para;</a></h2>
+<p>Historical <strong>Race v3</strong> study (pre–Markov, pre–dual-slot, pre–+1.0 pt trail). Live adds those overlays; use this section for baseline edge, not as a 1:1 live fill ledger.</p>
+<h3 id="race-v3-baseline">Race v3 (baseline)<a class="headerlink" href="#race-v3-baseline" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -2165,12 +2309,12 @@ entry_premium = max(ATR14 * 0.42 * 0.5, 0.50)
 <td>8/11</td>
 </tr>
 <tr>
-<td>Modern (2019-2026)</td>
+<td>Modern (2019–2026)</td>
 <td>+$231,940</td>
 </tr>
 <tr>
-<td>Early (2016-2018)</td>
-<td>-$47,465</td>
+<td>Early (2016–2018)</td>
+<td>−$47,465</td>
 </tr>
 </tbody>
 </table>
@@ -2184,45 +2328,40 @@ entry_premium = max(ATR14 * 0.42 * 0.5, 0.50)
 <th>Breakout</th>
 <th>BO P&amp;L</th>
 <th>Total</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>2016</td>
 <td>78</td>
-<td>-$8,590</td>
+<td>−$8,590</td>
 <td>59</td>
-<td>-$7,451</td>
-<td>-$16,041</td>
-<td></td>
+<td>−$7,451</td>
+<td>−$16,041</td>
 </tr>
 <tr>
 <td>2017</td>
 <td>149</td>
-<td>-$26,333</td>
+<td>−$26,333</td>
 <td>47</td>
-<td>-$2,881</td>
-<td>-$29,214</td>
-<td></td>
+<td>−$2,881</td>
+<td>−$29,214</td>
 </tr>
 <tr>
 <td>2018</td>
 <td>82</td>
-<td>-$11,066</td>
+<td>−$11,066</td>
 <td>34</td>
 <td>+$8,857</td>
-<td>-$2,209</td>
-<td></td>
+<td>−$2,209</td>
 </tr>
 <tr>
 <td>2019</td>
 <td>42</td>
-<td>-$4,278</td>
+<td>−$4,278</td>
 <td>35</td>
 <td>+$13,846</td>
 <td>+$9,568</td>
-<td></td>
 </tr>
 <tr>
 <td>2020</td>
@@ -2231,43 +2370,38 @@ entry_premium = max(ATR14 * 0.42 * 0.5, 0.50)
 <td>27</td>
 <td>+$796</td>
 <td>+$11,048</td>
-<td></td>
 </tr>
 <tr>
 <td>2021</td>
 <td>74</td>
-<td>-$16,590</td>
+<td>−$16,590</td>
 <td>45</td>
 <td>+$30,263</td>
 <td>+$13,673</td>
-<td></td>
 </tr>
 <tr>
 <td>2022</td>
 <td>20</td>
 <td>+$19,686</td>
 <td>26</td>
-<td>-$11,611</td>
+<td>−$11,611</td>
 <td>+$8,074</td>
-<td></td>
 </tr>
 <tr>
 <td>2023</td>
 <td>54</td>
-<td>-$3,461</td>
+<td>−$3,461</td>
 <td>39</td>
 <td>+$39,743</td>
 <td>+$36,283</td>
-<td></td>
 </tr>
 <tr>
 <td>2024</td>
 <td>57</td>
 <td>+$6,263</td>
 <td>33</td>
-<td>-$2,356</td>
+<td>−$2,356</td>
 <td>+$3,907</td>
-<td></td>
 </tr>
 <tr>
 <td>2025</td>
@@ -2276,7 +2410,6 @@ entry_premium = max(ATR14 * 0.42 * 0.5, 0.50)
 <td>38</td>
 <td>+$26,094</td>
 <td>+$52,309</td>
-<td></td>
 </tr>
 <tr>
 <td>2026</td>
@@ -2285,7 +2418,6 @@ entry_premium = max(ATR14 * 0.42 * 0.5, 0.50)
 <td>18</td>
 <td>+$21,678</td>
 <td>+$97,079</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -2314,10 +2446,9 @@ entry_premium = max(ATR14 * 0.42 * 0.5, 0.50)
 </tr>
 </tbody>
 </table>
-<p>Pullback has lower WR but asymmetric payoff — wins are nearly 2x losses. Breakout has higher WR and accounts for 63% of total P&amp;L despite being only 37% of trades.</p>
-<p>See the full <a href="../plan-h-backtest/">Backtest</a> for an interactive equity curve and trade-by-trade log.</p>
-<h3 id="monte-carlo-simulation-10000-runs">Monte Carlo simulation (10,000 runs)<a class="headerlink" href="#monte-carlo-simulation-10000-runs" title="Permanent link">&para;</a></h3>
-<p>Bootstrap resampling of all 1,092 trades with replacement to estimate the distribution of outcomes over the same number of trades.</p>
+<p>Pullback has lower WR but asymmetric payoff. Breakout accounts for most of total P&amp;L despite fewer trades.</p>
+<p>See the full <a href="../plan-h-backtest/">Backtest</a> for equity curve and trade log.</p>
+<h3 id="monte-carlo-10000-runs-baseline-race-v3-book">Monte Carlo (10,000 runs, baseline race-v3 book)<a class="headerlink" href="#monte-carlo-10000-runs-baseline-race-v3-book" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -2328,7 +2459,7 @@ entry_premium = max(ATR14 * 0.42 * 0.5, 0.50)
 </thead>
 <tbody>
 <tr>
-<td>P10 (bear case)</td>
+<td>P10</td>
 <td>+$105K</td>
 <td>$175K</td>
 </tr>
@@ -2338,7 +2469,7 @@ entry_premium = max(ATR14 * 0.42 * 0.5, 0.50)
 <td>$212K</td>
 </tr>
 <tr>
-<td>P50 (median)</td>
+<td>P50</td>
 <td>+$183K</td>
 <td>$253K</td>
 </tr>
@@ -2348,7 +2479,7 @@ entry_premium = max(ATR14 * 0.42 * 0.5, 0.50)
 <td>$295K</td>
 </tr>
 <tr>
-<td>P90 (bull case)</td>
+<td>P90</td>
 <td>+$266K</td>
 <td>$336K</td>
 </tr>
@@ -2376,7 +2507,7 @@ entry_premium = max(ATR14 * 0.42 * 0.5, 0.50)
 </tr>
 <tr>
 <td>Mean max drawdown</td>
-<td>-24.9%</td>
+<td>−24.9%</td>
 </tr>
 <tr>
 <td>Annualized Sharpe</td>
@@ -2386,17 +2517,9 @@ entry_premium = max(ATR14 * 0.42 * 0.5, 0.50)
 </table>
 <h3 id="key-discoveries">Key discoveries<a class="headerlink" href="#key-discoveries" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Early years (2016-2018) are net negative. The strategy's edge is modern — post-2019 market microstructure with tighter spreads and faster reversion. This is not a concern for live trading.</li>
-<li>Breakout accounts for 63% of total P&amp;L despite being only 37% of trades — the restricted 10:10 window filters out weak entries effectively.</li>
-<li>The 2.1% ruin probability comes from extreme drawdown sequences in the bootstrap — the actual backtest never approached 50% drawdown.</li>
-</ul>
-<h2 id="indicators">Indicators<a class="headerlink" href="#indicators" title="Permanent link">&para;</a></h2>
-<p>All computed on 5-min bars resampled from 1-min:</p>
-<ul>
-<li><strong>EMA5, EMA10, EMA21</strong> — span-based, adjust=False</li>
-<li><strong>ATR14</strong> — 14-period SMA of true range</li>
-<li><strong>VWAP</strong> — full-day, anchored 09:30 ET</li>
-<li><strong>VWAP slope</strong> — 2-bar diff on 5-min VWAP (10-min momentum)</li>
+<li>Early years (2016–2018) are net negative; edge is modern (post-2019 microstructure).</li>
+<li>Breakout carries a large share of P&amp;L under the 10:10 gate.</li>
+<li>Live <strong>Markov</strong> and <strong>dual-slot</strong> are operational overlays not fully reflected in the 1,092-trade table above.</li>
 </ul>
 
 
